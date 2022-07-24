@@ -1,20 +1,29 @@
 package Questions.FirstJava;
 
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Codechef
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        // your code goes here
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for(int i=0;i<T;i++){
 
-public class Calculator {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int t=sc.nextInt();
-        int v=sc.nextInt();
-        char c=sc.next().charAt(0);
-        if(c=='+'){
-            System.out.println(t+v);
-        }else if(c=='-'){
-            System.out.println(t-v);
+            System.out.println(value(sc.nextInt()));
         }
-        else if(c=='*'){
-            System.out.println(t*v);
+        sc.close();
+    }
+    static int value(int num){
+        int count=0;
+        while(num>0){
+            if(num%10==4){
+                count++;
+            }
+            num/=10;
         }
+        return count;
     }
 }
